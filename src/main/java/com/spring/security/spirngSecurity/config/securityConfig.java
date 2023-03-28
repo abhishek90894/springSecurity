@@ -1,6 +1,6 @@
 package com.spring.security.spirngSecurity.config;
 
-import com.spring.security.spirngSecurity.repository.CustomUserDetailService;
+import com.spring.security.spirngSecurity.service.CustomUserDetailService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
