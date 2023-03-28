@@ -1,10 +1,13 @@
 package com.spring.security.spirngSecurity.config;
 
 import com.spring.security.spirngSecurity.service.CustomUserDetailService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
@@ -16,4 +19,9 @@ public class securityConfig extends WebSecurityConfiguration {
     {
       auth.userDetailsService(userDetailService);
     }
+    @Bean
+       public   PasswordEncoder passwordEncoder()
+         {
+             return NoOpPasswordEncoder.getInstance();
+         }
 }
